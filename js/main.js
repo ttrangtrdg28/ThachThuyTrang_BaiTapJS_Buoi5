@@ -144,44 +144,43 @@ getEle("tinhThue").onclick = function () {
   if (0 < tongThuNhapChiuThue && tongThuNhapChiuThue <= 60) {
     thueNam = thue60(tongThuNhapChiuThue);
   } else if (60 < tongThuNhapChiuThue && tongThuNhapChiuThue <= 120) {
-    thueNam = thue60(tongThuNhapChiuThue);
+    thueNam = thue60(60);
     thueNam += thue60_120(tongThuNhapChiuThue);
   } else if (120 < tongThuNhapChiuThue && tongThuNhapChiuThue <= 210) {
-    thueNam = thue60(tongThuNhapChiuThue);
-    thueNam += thue60_120(tongThuNhapChiuThue);
+    thueNam = thue60(60);
+    thueNam += thue60_120(120);
     thueNam += thue120_210(tongThuNhapChiuThue);
   } else if (210 < tongThuNhapChiuThue && tongThuNhapChiuThue <= 384) {
-    thueNam = thue60(tongThuNhapChiuThue);
-    thueNam += thue60_120(tongThuNhapChiuThue);
-    thueNam += thue120_210(tongThuNhapChiuThue);
+    thueNam = thue60(60);
+    thueNam += thue60_120(120);
+    thueNam += thue120_210(210);
     thueNam += thue210_384(tongThuNhapChiuThue);
   } else if (384 < tongThuNhapChiuThue && tongThuNhapChiuThue <= 624) {
-    thueNam = thue60(tongThuNhapChiuThue);
-    thueNam += thue60_120(tongThuNhapChiuThue);
-    thueNam += thue120_210(tongThuNhapChiuThue);
-    thueNam += thue210_384(tongThuNhapChiuThue);
+    thueNam = thue60(60);
+    thueNam += thue60_120(120);
+    thueNam += thue120_210(210);
+    thueNam += thue210_384(384);
     thueNam += thue384_624(tongThuNhapChiuThue);
   } else if (624 < tongThuNhapChiuThue && tongThuNhapChiuThue <= 960) {
-    thueNam = thue60(tongThuNhapChiuThue);
-    thueNam += thue60_120(tongThuNhapChiuThue);
-    thueNam += thue120_210(tongThuNhapChiuThue);
-    thueNam += thue210_384(tongThuNhapChiuThue);
-    thueNam += thue384_624(tongThuNhapChiuThue);
+    thueNam = thue60(60);
+    thueNam += thue60_120(120);
+    thueNam += thue120_210(210);
+    thueNam += thue210_384(384);
+    thueNam += thue384_624(624);
     thueNam += thue624_960(tongThuNhapChiuThue);
   } else if (tongThuNhapChiuThue > 960) {
-    thueNam = thue60(tongThuNhapChiuThue);
-    thueNam += thue60_120(tongThuNhapChiuThue);
-    thueNam += thue120_210(tongThuNhapChiuThue);
-    thueNam += thue210_384(tongThuNhapChiuThue);
-    thueNam += thue384_624(tongThuNhapChiuThue);
-    thueNam += thue624_960(tongThuNhapChiuThue);
+    thueNam = thue60(60);
+    thueNam += thue60_120(120);
+    thueNam += thue120_210(210);
+    thueNam += thue210_384(384);
+    thueNam += thue384_624(624);
+    thueNam += thue624_960(960);
     thueNam += thue960(tongThuNhapChiuThue);
   }
   var thue =
     "Tiền thuế thu nhập cá nhân: " + numberFormat.format(thueNam * 1000000);
   getEle("tienThue").innerHTML = thue;
 };
-
 /**
  * BÀI 4
  * Đầu vào:
